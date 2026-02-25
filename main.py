@@ -8,7 +8,7 @@ from dateutil.utils import today
 dnes = datetime.now()
 pred_deseti_lety = datetime.now() - timedelta(days=10*365)
 # 1. Stažení dat pro S&P 500 (^GSPC)
-ticker = "EBS.VI"
+ticker = "^GSPC"
 data = yf.download(ticker, start=pred_deseti_lety, end=dnes)
 
 # 2. Výpočet klouzavých průměrů (SMA - Simple Moving Average)
@@ -55,4 +55,5 @@ plt.xlabel('Datum')
 plt.ylabel('Cena')
 plt.legend() # Zobrazí legendu s popisky
 plt.grid(True) # Přidáme mřížku
+
 plt.show() # Zobrazí graf
