@@ -7,7 +7,7 @@ from dateutil.utils import today
 
 dnes = datetime.now()
 pred_deseti_lety = datetime.now() - timedelta(days=10*365)
-# 1. Stažení dat pro S&P 500 (^GSPC)
+# 1. Stažení dat pro danný ticker
 ticker = input("Enter a ticker: ")
 data = yf.download(ticker, start=pred_deseti_lety, end=dnes)
 
